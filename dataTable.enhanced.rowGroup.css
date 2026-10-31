@@ -1,0 +1,9 @@
+.tableman-picker { position: relative; display: inline-block; margin: 0 0 0.75rem; font: inherit; }
+.tableman-picker > summary { display: list-item; padding: 0.35rem 0.7rem; border: 1px solid #aaa; border-radius: 0.25rem; cursor: pointer; }
+.tableman-choices { position: absolute; z-index: 10; min-width: 12rem; max-height: 18rem; overflow: auto; padding: 0.4rem; border: 1px solid #aaa; border-radius: 0.25rem; background: #fff; box-shadow: 0 0.25rem 0.6rem #0002; }
+.tableman-choices label { display: block; padding: 0.2rem 0.4rem; white-space: nowrap; cursor: pointer; }
+.tableman-group > td { background: #e8eaf6; }
+.tableman-toggle { width: 100%; padding: 0.2rem 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.tableman-toggle:focus-visible { outline: 2px solid #365ab5; }
+.tableman-chevron { display: inline-block; width: 1.3rem; }
+.tableman-total > td { font-weight: 600; background: #f4f4f8; }

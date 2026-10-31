@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DataTables enhanced RowGroup demo</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.5/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/2.1.1/css/rowGroup.dataTables.min.css">
+    <link rel="stylesheet" href="dataTable.enhanced.rowGroup.css">
+    <style>
+        body { font: 16px system-ui, sans-serif; margin: 2rem auto; max-width: 1100px; padding: 0 1rem; }
+        h1 { font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+    <h1>Enhanced RowGroup</h1>
+    <p>Choose one or more columns under “Group by”, then click a group to collapse or expand it.</p>
+    <table id="DataGridDT" class="display" style="width:100%"></table>
+
+    <script src="data.js"></script>
+    <script src="https://cdn.datatables.net/3.1.5/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/2.1.1/js/dataTables.rowGroup.min.js"></script>
+    <script src="dataTable.enhanced.rowGroup.js"></script>
+    <script>
+        const table = new Tableman('#DataGridDT', {
+            data: demodata,
+            columns: [
+                { title: 'Country', data: 'country' },
+                { title: 'State', data: 'state' },
+                { title: 'City', data: 'city' },
+                { title: 'Category', data: 'category' },
+                { title: 'Subcategory', data: 'subCategory' },
+                { title: 'Amount', data: 'amount' }
+            ],
+            grpEnable: true,
+            groupBy: ['country', 'state'],
+            grpSelectEnable: true,
+            groupTotal: [{ column: 'amount' }]
+        });
+    </script>
+</body>
+</html>
